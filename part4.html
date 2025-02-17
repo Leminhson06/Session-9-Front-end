@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 16px;
+            padding: 16px;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #3498db;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #4CAF50;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #e74c3c;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #9b59b6;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <header class="header">Header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <main class="content">Content</main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

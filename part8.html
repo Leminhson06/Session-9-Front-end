@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin-bottom: 1rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero h2 {
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #666;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .featured-work {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .featured-work h2 {
+            margin-bottom: 2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project {
+            text-align: center;
+        }
+
+        .project img {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            background-color: #f4f4f4;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 2rem;
+        }
+
+        .about p {
+            max-width: 1000px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Portfolio Website</h1>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to my portfolio website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id ultrices tellus. Duis tristique nulla ex, nec lobortis risus maximus a.</p>
+        <a href="#" class="button">View Portfolio</a>
+    </section>
+
+    <section class="featured-work">
+        <h2>Featured Work</h2>
+        <div class="project-grid">
+            <div class="project">
+                <img src="/api/placeholder/150/150" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="project">
+                <img src="/api/placeholder/150/150" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <div class="project">
+                <img src="/api/placeholder/150/150" alt="Project 3">
+                <p>Project 3</p>
+            </div>
+            <div class="project">
+                <img src="/api/placeholder/150/150" alt="Project 4">
+                <p>Project 4</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id ultrices tellus. Duis tristique nulla ex, nec lobortis risus maximus a. Integer vel arcu euismod, tincidunt felis at, ultrices felis. Ut imperdiet, elit vel venenatis vulputate, tellus nisl tincidunt purus, a tristique velit lacus eget purus.</p>
+    </section>
+
+    <footer class="footer">
+        © 2023 Portfolio Website
+    </footer>
+</body>
+</html>

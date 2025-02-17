@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .featured-post, .other-posts {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .post-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .other-posts h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .post {
+            margin-bottom: 1.5rem;
+        }
+
+        .post h3 {
+            color: #444;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MY BLOG</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Posts</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article class="featured-post">
+            <h1 class="post-title">Bài viết nổi bật</h1>
+            <h2>Tiêu đề bài viết chính</h2>
+            <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nulla eu lorem tincidunt tristique.</p>
+            <a href="#" class="read-more">Đọc thêm</a>
+        </article>
+
+        <section class="other-posts">
+            <h2>Các bài viết khác</h2>
+            <div class="post">
+                <h3>Bài viết 1</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+            <div class="post">
+                <h3>Bài viết 2</h3>
+                <p>Ut nulla eu lorem tincidunt...</p>
+            </div>
+            <div class="post">
+                <h3>Bài viết 3</h3>
+                <p>Consectetur adipiscing elit...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2023 My Blog. All rights reserved.
+    </footer>
+</body>
+</html>

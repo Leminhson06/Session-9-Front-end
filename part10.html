@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .header {
+            background-color: #2196f3;
+            color: white;
+            padding: 1rem 2rem;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .button {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .outlined-button {
+            border: 1px solid white;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #1976d2;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .tab {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            padding-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .tab.active {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+
+        .search-container {
+            padding: 1.5rem 2rem;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .search-input input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .primary-button {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                gap: 1rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <h1 class="title">Authentication</h1>
+            <div class="actions">
+                <a href="#" class="button">Go to docs</a>
+                <a href="#" class="button outlined-button">Web setup</a>
+                <a href="#" class="button">?</a>
+                <div class="avatar"></div>
+            </div>
+        </div>
+        <nav class="tabs">
+            <a href="#" class="tab active">Users</a>
+            <a href="#" class="tab">Sign-in method</a>
+            <a href="#" class="tab">Templates</a>
+            <a href="#" class="tab">Usage</a>
+        </nav>
+    </header>
+
+    <main class="search-container">
+        <div class="search-box">
+            <div class="search-input">
+                <span>🔍</span>
+                <input type="text" placeholder="Search by email address, phone number, or user UID">
+            </div>
+            <button class="primary-button">Add user</button>
+            <button class="primary-button">↻</button>
+        </div>
+        <div class="empty-state">
+            No users for this project yet
+        </div>
+    </main>
+</body>
+</html>
